@@ -16,4 +16,11 @@ describe('BankAccount Unit Test', () => {
 
     expect(bankAccount.balance).toBe(200);
   })
+
+  it('should credit an account', () => {
+    const bankAccount = new BankAccount('123a',300,'33333');
+    bankAccount.credit(100);
+
+    expect(bankAccount.balance).toBe(400);
+  })
 })
